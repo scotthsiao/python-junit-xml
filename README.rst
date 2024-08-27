@@ -25,6 +25,27 @@ My Example
     if __name__ == '__main__':
         junit_tester()
 
+My Output  
+----------
+
+.. code-block:: xml
+
+        <?xml version="1.0" ?>
+        <testsuites disabled="0" errors="1" failures="1" tests="4" skipped="1" time="493.38">
+	        <testsuite disabled="0" errors="1" failures="1" name="my test suite" skipped="1" tests="4" time="493.38">
+		        <testcase name="Test1" time="123.345000" classname="some.class.name"/>
+		        <testcase name="Test2" time="123.345000" classname="some.class.name">
+			        <error type="error" message="It's a error!"/>
+        		</testcase>
+	        	<testcase name="Test3" time="123.345000" classname="some.class.name">
+		        	<failure type="failure" message="I am a failure!"/>
+        		</testcase>
+        		<testcase name="Test4" time="123.345000" classname="some.class.name">
+	        		<skipped type="skipped" message="Just skipped for nothing!"/>
+		        </testcase>
+	        </testsuite>
+        </testsuites>
+
 Original Content
 ================
 
