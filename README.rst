@@ -1,5 +1,5 @@
 Scott's Changes
-------------
+----------------
 
 1. Add "Skipped" counts to testsuite summary
 
@@ -7,6 +7,7 @@ My Example
 ----------
 
 .. code-block:: python
+
     from junit_xml import TestSuite, TestCase, to_xml_report_string
 
     def junit_tester():
