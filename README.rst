@@ -1,3 +1,32 @@
+Scott's Changes
+------------
+
+1. Add "Skipped" counts to testsuite summary
+
+My Example  
+----------
+
+.. code-block:: python
+    from junit_xml import TestSuite, TestCase, to_xml_report_string
+
+    def junit_tester():
+        test_cases = [TestCase('Test1', 'some.class.name', 123.345),
+                      TestCase('Test2', 'some.class.name', 123.345),
+                      TestCase('Test3', 'some.class.name', 123.345),
+                      TestCase('Test4', 'some.class.name', 123.345)]
+        test_cases[1].add_error_info("It's a error!")
+        test_cases[2].add_failure_info("I am a failure!")
+        test_cases[3].add_skipped_info("Just skipped for nothing!")
+        ts = TestSuite("my test suite", test_cases)
+        # pretty printing is on by default but can be disabled using prettyprint=False
+        print(to_xml_report_string([ts]))
+
+    if __name__ == '__main__':
+        junit_tester()
+
+Original Content
+================
+
 python-junit-xml
 ================
 .. image:: https://travis-ci.org/kyrus/python-junit-xml.png?branch=master
